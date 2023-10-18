@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root { 
+    --font-family: 'Rubik', sans-serif;
+    --color-primary:rgb(54, 53, 53);
+    --color-orange:#f3886d;
+    --color-green:#56907bf2;
+    --color-yellow:  #cdd197;
+}
+
+main {
+    background-color: var(--color-orange);
+    background-color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header.menu-container {
+    width: 100%;
+    grid-template-columns: 200px 1fr;
+    padding: 20px;
+    gap: 5px;
+    border: 5px solid black;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    background-color: #cdd197;
+    background-image: url(http://www.transparenttextures.com/patterns/dark-denim.png);
+}
+
+header > .logo {
+    width: 50%;
+    object-fit: cover;
+}
+
+.menu-icon {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.menu-list {
+    display: grid;
+    padding: 0.8em 1em 0.8em 1em;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: stretch;
+    font-size: 20px;
+    gap: 2em;
+}
+
+.menu-list > li > a {
+    font-size: 17px;
+    color: white;
+}
+
+body {
+    width: 100%;
+}
+
+.gallery {
+    padding: 1em 0 2em 0;
+}
+
+.gallery-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.gallery-container {
+    display: grid;
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.gallery-container > img:nth-child(1) {
+    grid-column: 1 / 3;
+}
+
+.gallery-container > img:nth-child(4) {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+}
+
+.gallery-container > img:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    object-position: calc(72% + 70px);
+}
+
+.gallery-container > img:nth-child(6) {
+    object-position: calc(65% + 70px);
+}
+
+.form {
+    height: 500px;
+}
+
+.form-container {
+    display: grid;
+    padding: 10px 0 0 0;
+    align-items: center;
+    align-content: center;
+    text-align: justify;
+    justify-content: center;
+    justify-items: center;
+}
+
+.register-form {
+    display: grid;
+    width: 80%;
+    margin: auto;
+    max-width: 400px;
+    background-color: var(--color-yellow);
+    background-image: url(http://www.transparenttextures.com/patterns/dark-denim.png);
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0;
+    border-radius: 20px;
+    border: 5px solid black;
+    grid-template-columns: repeat(200px, 1fr);
+}
+
+.register-form input {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+label {
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.register-form button {
+    margin: 20px 0 20px 0;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+/*MEDIA QUERIES*/
+
+
+
+
+
+
+@media (min-width:1440px) {
+
+    header.menu-container {
+        padding: 66px;
+        border: 20px solid black;
+    }
+
+    .menu-list > li > a {
+        font-size: 30px;
+        color: white;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .register-form {
+        max-width: 800px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    .register-form input {
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 10px 50px 10px 50px;
+    }
+    
+    .gallery-container > img:nth-child(5) {
+        object-position: calc(40% + 0px);
+    }
+
+    .gallery-container > img:nth-child(6) {
+        object-position: calc(40% + 0px);
+    }
+    
+}
+
+
+
+
+
+@media (min-width:1080px) and (max-width:1440px){
+
+    .menu-list > li > a {
+        font-size: 20px;
+        color: white;
+    }
+
+    header.menu-container {
+        padding: 20px;
+        border: 15px solid black;
+    }
+
+    .gallery-container {
+        grid-template-columns:repeat(4, 0.5fr);
+        grid-template-rows: repeat(2, 0.5fr);
+    }
+
+    .gallery-container > img:nth-child(1){
+         grid-column: 1/3;
+         grid-row: 1/2;
+    }
+
+    .gallery-container > img:nth-child(2){
+        grid-column: 3/4;
+        grid-row: 1/2;
+   }
+
+   .gallery-container > img:nth-child(3){
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+
+    .gallery-container > img:nth-child(4){
+        grid-column: 3/5;
+        grid-row: 2/3;
+    }
+
+   .gallery-container > img:nth-child(5){
+       grid-column: 1/2;
+       grid-row: 2/3;
+    }
+
+   .gallery-container > img:nth-child(6){
+       grid-column: 2/3;
+       grid-row: 2/3;
+    }
+
+    .gallery-container > img:nth-child(3) {
+        object-position: calc(50% + 0px);
+    }
+
+    .gallery-container > img:nth-child(5) {
+        object-position: calc(50% + 0px);
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 6px;
+    }
+
+    .register-form {
+        max-width: 800px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    .register-form input {
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 10px 50px 10px 50px;
+    } 
+
+}
+
+
+
+
+@media (min-width:700px) and (max-width:1080px){
+
+    .menu-list > li > a {
+        font-size: 18px;
+        color: white;
+    }
+
+    header.menu-container {
+        padding: 10px;
+        border: 12px solid black;
+    }
+
+    .gallery-container {
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .gallery-container > img:nth-child(1){
+         grid-column: 1/3;
+         grid-row: 1/2;
+    }
+
+    .gallery-container > img:nth-child(2){
+        grid-column: 3/4;
+        grid-row: 1/2;
+   }
+
+   .gallery-container > img:nth-child(3){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .gallery-container > img:nth-child(4){
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+   .gallery-container > img:nth-child(5){
+       grid-column: 1/3;
+     grid-row: 3/4;
+    }
+
+   .gallery-container > img:nth-child(6){
+       grid-column: 3/4;
+       grid-row: 3/4;
+    }
+
+    .gallery-container > img:nth-child(3) {
+        object-position: calc(100% + 0px);
+    }
+
+    .gallery-container > img:nth-child(5) {
+        object-position: calc(100% + 0px);
+    }
+    
+}
+
+
+
+
+
+
+@media (min-width:450px) and (max-width: 700px) {
+
+    header > nav {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        width: 38px;
+        cursor: pointer;
+    }
+
+    .menu-list {
+        display: none;
+    }
+    
+    header > .logo {
+        width: 37%;
+        object-fit: cover;
+    }
+
+    .gallery-container {
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .gallery-container > img:nth-child(1){
+         grid-column: 1/3;
+         grid-row: 1/2;
+    }
+
+    .gallery-container > img:nth-child(2){
+        grid-column: 1/2;
+        grid-row: 2/3;
+   }
+
+   .gallery-container > img:nth-child(3){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .gallery-container > img:nth-child(4){
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+   .gallery-container > img:nth-child(5){
+       grid-column: 1/3;
+       grid-row: 4/5;
+    }
+
+   .gallery-container > img:nth-child(6){
+       grid-column: 1/3;
+       grid-row: 5/6;
+    }
+
+   .gallery-container > img:nth-child(5) {
+        object-position: calc(100% + 0px);
+    }
+
+    .gallery-container > img:nth-child(6) {
+        object-position: calc(100% + 0px);
+    }
+}
+
+
+
+
+
+@media (max-width: 450px) {
+
+    header > nav {
+        display: none;
+    }
+
+    header > .logo {
+        width: 25%;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    .menu-list {
+        display: block;
+    }
+
+    .gallery-container {
+        grid-template-columns:repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .gallery-container > img:nth-child(1){
+         grid-column: 1/2;
+         grid-row: 1/2;
+    }
+
+    .gallery-container > img:nth-child(2){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .gallery-container > img:nth-child(3){
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .gallery-container > img:nth-child(4){
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .gallery-container > img:nth-child(5){
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .gallery-container > img:nth-child(6){
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+
+    .gallery-container > img:nth-child(5) {
+        object-position: calc(100% + 0px);
+    }
+
+    .gallery-container > img:nth-child(6) {
+        object-position: calc(100% + 0px);
+    }
+
+    .gallery-container > img:nth-child(5) {
+        object-position: calc(63% + 43px);
+    }
+
+    .gallery-container > img:nth-child(6) {
+        object-position: calc(62% + 50px);
+    }
+}
